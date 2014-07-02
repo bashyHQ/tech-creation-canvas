@@ -1,7 +1,8 @@
 body {
   margin: 30px;
   padding: 0;
-  font-family: verdana, sans-serif; 
+  font-family: 'Lato', sans-serif;
+  color: #333;
 }
 h1 {
   font-size: 50px;
@@ -124,14 +125,15 @@ h5 {
 .tc-canvas .tc-area-b {
   display: inline-block;
   vertical-align: top;
-  border-left: solid 1px;
+  border-left: solid 1px #eee;
   overflow-y: scroll;
-  padding: 5px;
+  padding: 10px;
 }
 
 .tc-canvas .tc-area-a {
   height: 30em;
   width: 19.5%;
+  position: relative;
 }
 
 .tc-canvas .tc-area-b {
@@ -139,8 +141,24 @@ h5 {
   width: 49%;
 }
 
+.tc-canvas .tc-body,
+.tc-canvas .tc-bottomline{
+  border: 1px solid #eee;
+}
 .tc-canvas .tc-body {
-  border-bottom: 1px solid;
+  border-bottom: none;
+}
+
+.tc-canvas h3 {
+  margin: 0.2em;
+  color: #999;
+}
+
+.secondary {
+  margin-top: 5em;
+  font-size: 0.8em;
+  bottom: 0;
+  position: absolute;
 }
 
 
@@ -151,15 +169,23 @@ h5 {
 
 
 .tc-canvas ul {
+  margin: 0;
   list-style: none;
   padding: 0;
 
 }
 
-.tc-canvas li {
-  margin: 0 0 10px 0;
-  padding: 0;
+.tc-canvas .primary li {
+  margin: 0px 0px 15px;
+  padding: 0px;
+  line-height: 1.5em;
+  border-top: 1px dashed #EEE;
+  padding-top: 4px;
 }
 
-
-  height: 30em;
+.tc-canvas .secondary li {
+  padding: 3px;
+  display: inline-block;
+  border: 1px dashed #eee;
+  margin: 2px;
+}
