@@ -128,15 +128,21 @@
   </div>
 </script>
 <div class='dst'>
-  <a href="#" id="permalink">permalink</a>
   <div id="result"></div>
   <p class="credits">build with <a href="http://ligthyear.github.io/tech-creationist-canvas">The Tech Creationist Canvas</a> <br>– a project by <a href="http://www.create-build-execute.com/">Benjamin Kampmann</a></p>
 </div>
 
 <div class='src'>
-  <span class="open-editor" onclick="javascript:document.getElementsByTagName('body')[0].classList.add('editor-open');">open editor</span>
-  <span class="close-editor" onclick="javascript:document.getElementsByTagName('body')[0].classList.remove('editor-open');">close editor</span>
   <h5>Edit source here (YAML):</h5>
+  <div class="editor-links">
+    <span class="no-embed" onclick="javascript:document.getElementsByClassName('src')[0].classList.add('embed-open');">embed</span>
+    <input id="embedlink" type="text" class="embed"> <span class="embed" onclick="javascript:document.getElementsByClassName('src')[0].classList.remove('embed-open');">x</span> || 
+    <a href="#" id="permalink">permalink</a>
+  </div>
+  <div class="editor-actions">
+    <span class="open-editor" onclick="javascript:document.getElementsByTagName('body')[0].classList.add('editor-open');">open editor</span>
+    <span class="close-editor" onclick="javascript:document.getElementsByTagName('body')[0].classList.remove('editor-open');">close editor</span>
+  </div>
   <textarea id="source">
 # the name of the project
 name: "Tech Creationist Canvas"

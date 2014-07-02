@@ -5,6 +5,10 @@
 window.runDemo = function runDemo() {
   'use strict';
 
+  if (window!=window.top) {
+    document.getElementsByTagName("body")[0].classList.add("in-frame");
+  }
+
   var source, initial, permalink, timer1, timer2 = null,
       fallback = document.getElementById('source').value || ',',
       result = document.getElementById("result"),
@@ -40,6 +44,7 @@ window.runDemo = function runDemo() {
       obj = jsyaml.load(str, { schema: SEXY_SCHEMA });
 
       permalink.href = '#tcc=' + base64.encode(str);
+      embedlink.value = '<iframe width="1024" height="860" src="' + permalink.href + '"></iframe>';
 
       result.innerHTML = template(obj);
     } catch (err) {
@@ -68,16 +73,17 @@ window.runDemo = function runDemo() {
     if (location.hash){
       if ('#tcc=' === location.hash.toString().slice(0,5)) {
         yaml = base64.decode(location.hash.slice(5));
-        source.setValue(yaml || fallback);
-        parse();
       } else if ('#gist=' === location.hash.toString().slice(0,6)) {
         display_error("<h2>Loading Gist</h2>")
         var script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = 'https://api.github.com/gists/' + location.hash.toString().slice(6) + '?callback=loadFromGist';
         document.getElementsByTagName("body")[0].appendChild(script);
+        return;
       }
     }
+    source.setValue(yaml || fallback);
+    parse();
   }
 
   permalink = document.getElementById('permalink');

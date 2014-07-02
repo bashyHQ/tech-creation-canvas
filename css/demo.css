@@ -4,13 +4,11 @@ body {
   font-family: 'Lato', sans-serif;
   color: #333;
 }
+
 h1 {
   font-size: 50px;
   margin: 40px 0 30px;
   color: #aaa;
-}
-#permalink {
-  float: right;
 }
 
 #dataLoader {
@@ -62,6 +60,40 @@ h5 {
 
 .cm-s-default span.cm-comment {color: #baa;}
 
+.src .editor-links,
+.src h5,
+.src .editor-actions {
+  width: 30%;
+  display: inline-block;
+}
+
+.src .editor-links span {
+  cursor: pointer;
+}
+
+.src .editor-links input {
+  width: 65%;
+}
+
+.embed {
+  display: none;
+}
+
+.embed-open .embed {
+  display: inline-block;
+}
+
+.embed-open .no-embed {
+  display: none;
+}
+
+.src .editor-links {
+  text-align: center;
+}
+
+.src .editor-actions {
+  text-align: right;
+}
 
 .editor-open .src {
   height: 250px;
@@ -75,9 +107,6 @@ h5 {
 .open-editor,
 .editor-open .close-editor {
   display: block;
-  float: right;
-  padding-right: 10px;
-  line-height: 30px;
   cursor: pointer;
 }
 
@@ -196,4 +225,11 @@ h5 {
   display: inline-block;
   border: 1px dashed #eee;
   margin: 2px;
+}
+
+.in-frame .src,
+.in-frame #embedlink,
+.in-frame #permalink
+ {
+  display: none
 }
