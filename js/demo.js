@@ -52,12 +52,23 @@ window.runDemo = function runDemo() {
     }
   }
 
+  window.loadFromGitRepo = function(data){
+    if (data.data.content) {
+      source.setValue(base64.decode(data.data.content));
+      parse();
+    } else display_error("<h1>YAML file not found in repo.</h1>");
+  }
+
   window.loadFromGist = function(data){
     var content;
-    for (var key in data.data.files) {
-      if (data.data.files[key].language === "YAML"){
-        content = data.data.files[key].content;
-        break;
+    if (data.data.files["tcc.yml"]){
+      content = data.data.files["tcc.yml"].content;
+    } else {
+      for (var key in data.data.files) {
+        if (data.data.files[key].language === "YAML"){
+          content = data.data.files[key].content;
+          break;
+        }
       }
     }
     if (content) {
@@ -74,10 +85,20 @@ window.runDemo = function runDemo() {
       if ('#tcc=' === location.hash.toString().slice(0,5)) {
         yaml = base64.decode(location.hash.slice(5));
       } else if ('#gist=' === location.hash.toString().slice(0,6)) {
-        display_error("<h2>Loading Gist</h2>")
+        display_error("<h2>Loading Gist</h2>");
         var script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = 'https://api.github.com/gists/' + location.hash.toString().slice(6) + '?callback=loadFromGist';
+        document.getElementsByTagName("body")[0].appendChild(script);
+        return;
+      } else if('#github=' === location.hash.toString().slice(0,8)){
+        display_error("<h2>Loading from Repo</h2>");
+        var splitted = location.hash.toString().slice(8).split(":", 2),
+            repo_path = splitted[0],
+            filename = splitted[1] || 'tcc.yml',
+            script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://api.github.com/repos/' + repo_path + '/contents/' + filename + '?callback=loadFromGitRepo';
         document.getElementsByTagName("body")[0].appendChild(script);
         return;
       }
