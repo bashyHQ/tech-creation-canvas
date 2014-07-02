@@ -34,7 +34,7 @@ window.runDemo = function runDemo() {
       str = source.getValue();
       obj = jsyaml.load(str, { schema: SEXY_SCHEMA });
 
-      permalink.href = '#yaml=' + base64.encode(str);
+      permalink.href = '#tcc=' + base64.encode(str);
 
       result.innerHTML = template(obj);
     } catch (err) {
@@ -45,8 +45,8 @@ window.runDemo = function runDemo() {
   function updateSource() {
     var yaml;
 
-    if (location.hash && '#yaml=' === location.hash.toString().slice(0,6)) {
-      yaml = base64.decode(location.hash.slice(6));
+    if (location.hash && '#tcc=' === location.hash.toString().slice(0,5)) {
+      yaml = base64.decode(location.hash.slice(5));
     }
 
     source.setValue(yaml || fallback);
@@ -88,7 +88,7 @@ window.runDemo = function runDemo() {
   // });
 
   // initial source
-  updateSource();
+  //updateSource();
 
   // start monitor hash change
   hasher.prependHash = '';

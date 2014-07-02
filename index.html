@@ -53,14 +53,24 @@
               </div>
           </div>
           <div class="tc-area-a pitch">
-              <h3>Pitch</h3>
+              <h3>Impact</h3>
               <ul class="primary">
-              {{#each one_liner}}
+              {{#each impact}}
                   <li>{{this}}</li>
               {{else}}
                   <span class="empty"></span>
               {{/each}}
               </ul>
+              <div class="secondary">
+                <h3>Metrics</h3>
+                <ul>
+                {{#each alternatives}}
+                    <li>{{this}}</li>
+                {{else}}
+                    <span class="empty"></span>
+                {{/each}}
+                </ul>
+              </div>
           </div>
           <div class="tc-area-a reach">
               <h3>Reach</h3>
@@ -128,88 +138,76 @@
 <div class='src'>
   <h5>Edit source here (YAML):</h5>
   <textarea id="source">
-name: "Tech Creationist Community | Create.Build.Execute. Community"
-tagline: creationism is an evolutionary community process
-tc-version: 1
-version: 1.0
-date: June 29, 2014 – 16:32
+# the name of the project
+name: "Tech Creationist Canvas"
 
+# Describe the project in a one-line elevator pitch
+tagline: Evalutating tech ideas to increase impact
+
+# tech creationist canvas version
+tcc-version: 1
+
+# versioning of the idea
+version: 1.0
+# when did you change this?
+date: July 2nd, 2014 – 16:32
 
 
 problems:
-  - too many good ideas stay hidden, especially towards those who supposedly benefit the most from it (aka helping the poor with XXXX)
-  - techies build awesome products but suck at marketing them
-  - business peeps are missing good ideas, projects and the possibility to build them
-  - good ideas are a collective effort, require time and a constructive discourse to emerge and thrive
+# Please describe the problems you want to solve
+  - finding the value propostion of a tech idea is hard
+  - there is no decent way of evaluting tech ideas quickly and early
+  - most evalutions are too business-driven
+  - evaluting tech ideas isn't accessible to hackers
 
 
 solutions:
-  - an international community of tech product creationists, connecting each other, sharing successful tips and tricks while also acting as a thinktank and vienese café
+# what is the proposed solution to them?
+  - an evolution of the lean startup canvas for tech driven ideas
 
 alternatives:
-  - quora
-  - hacker news
-  - (Berlin) Hack'n'Tell
-  - hackathon.io / AngelHack
-  - LinkedIn
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - lean startup canvas
 
+impact:
+# what are the (ideological) impacts you try to make with it?
+  - enable more techies to evaluate their solutions and develop them to impact society for the better
+
+key_metrics:
+# what key metrics to look at/measure in order to find out whether the solution does have the desired impact?
+  - users of the canvas
+  - links to the canvas
+  - people talking about the canvas
 
 for:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
   - techies/developers with a cool projects
-  - business people looking for ideas
-  - businesses looking for ideas
-  - non-profits raising awareness about problems
-  - investors looking for revolutional ideas
+  - business people to understand the value proposition of tech ideas
 
 
 early_adopters:
-  - Friends and acquiotens (Carl, coderholic)
-  - Berlin Hack'n'Tell
-  - Berlin Startup Scene
-
+# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+  - Ben
+  - tech creationist's community
 
 reaching:
-  - talking about it at HnT/Recording it there
+# how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
+  - using it to evalute existing concepts
   - Personal contacts
-  - Adwords (does this make sense/what to target for?)
-  - content production
-
+  - integrating it into tech creationist community
 
 costs:
-  - content production (blog posts, ebooks, bhnt videos)
-  - moderation (volunteer)
+# what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
   - initial build
-  - marketing
-  - hosting
-
+  - hosting (free on gh-pages)
+  - integration into discourse
 
 revenue:
- - personal time of team
- - volunteer time by community
- - money from Ben
- - money through eBook sales
- - money through donations (paypal, gittip, etc)
- - sponsoring/sponsorships
-
-
-one_liner:
- - An online community to discuss, nature and elevate tech solutions fixing real world problems through educating its techies about business/marketing/sales and connecting project builders with people allowing them to apply them.
+# How will this be paid for? Both in time and money
+ - personal time of ben
 
 </textarea>
 </div>
-
-<!-- AddThis Button BEGIN
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-<a class="addthis_button_preferred_1"></a>
-<a class="addthis_button_preferred_2"></a>
-<a class="addthis_button_preferred_3"></a>
-<a class="addthis_button_preferred_4"></a>
-<a class="addthis_button_compact"></a>
-<a class="addthis_counter addthis_bubble_style"></a>
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4eb9fd761a407f6b"></script>
-<!-- AddThis Button END -->
-
     <script src="js/es5-shim.js"></script>
     <script src="js/esprima.js"></script>
     <script src="js/js-yaml.js"></script>
