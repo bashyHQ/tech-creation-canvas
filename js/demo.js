@@ -4,8 +4,10 @@
 window.runDemo = function runDemo() {
   'use strict';
 
-  var source, result, initial, permalink, timer1, timer2 = null,
-      fallback = document.getElementById('source').value || '';
+  var source, initial, permalink, timer1, timer2 = null,
+      fallback = document.getElementById('source').value || ',',
+      result = document.getElementById("result"),
+      template = Handlebars.compile(document.getElementById('template').innerHTML);
 
   // add sexy constructor
   var sexyType = new jsyaml.Type('!sexy', {
@@ -18,7 +20,7 @@ window.runDemo = function runDemo() {
       for (index = 0, length = state.result.length; index < length; index += 1) {
         state.result[index] = 'sexy ' + state.result[index];
       }
-      
+
       return true;
     }
   });
@@ -34,11 +36,9 @@ window.runDemo = function runDemo() {
 
       permalink.href = '#yaml=' + base64.encode(str);
 
-      result.setOption('mode', 'javascript');
-      result.setValue(inspect(obj, false, 10));
+      result.innerHTML = template(obj);
     } catch (err) {
-      result.setOption('mode', 'text/plain');
-      result.setValue(err.stack || err.message || String(err));
+      result.innerHTML = "<pre>" + err.stack || err.message || String(err) + "</pre>";
     }
   }
 
@@ -83,9 +83,9 @@ window.runDemo = function runDemo() {
     }
   });
 
-  result = CodeMirror.fromTextArea(document.getElementById('result'), {
-    readOnly: true
-  });
+  // result = CodeMirror.fromTextArea(document.getElementById('result'), {
+  //   readOnly: true
+  // });
 
   // initial source
   updateSource();

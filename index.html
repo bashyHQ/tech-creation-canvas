@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>YAML parser for JavaScript - JS-YAML</title>
+    <title>Tech Creationist Canvas</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Live example of YAML JavaScript parser right in your browser. Type your YAML code and see result.">
     <meta name="keywords" content="yaml,parser,javascript">
@@ -18,247 +18,189 @@
     <script src="js/utils.js"></script>
     <script src="js/base64.js"></script>
     <script src="js/json3.js"></script>
+    <script src="js/handlebars.min.js"></script>
     <script src="js/demo.js"></script>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26895916-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
   </head>
   <body onLoad="runDemo();">
 
-<h1>JS-YAML demo. YAML JavaScript parser.</h1>
-<div class='src'>
-  <h5><a href="#" id="permalink">permalink</a> Edit source here (YAML):</h5>
-  <textarea id="source">---
-# Collection Types #############################################################
-################################################################################
-
-# http://yaml.org/type/map.html -----------------------------------------------#
-
-map:
-  # Unordered set of key: value pairs.
-  Block style: !!map
-    Clark : Evans
-    Ingy  : döt Net
-    Oren  : Ben-Kiki
-  Flow style: !!map { Clark: Evans, Ingy: döt Net, Oren: Ben-Kiki }
-
-# http://yaml.org/type/omap.html ----------------------------------------------#
-
-omap:
-  # Explicitly typed ordered map (dictionary).
-  Bestiary: !!omap
-    - aardvark: African pig-like ant eater. Ugly.
-    - anteater: South-American ant eater. Two species.
-    - anaconda: South-American constrictor snake. Scaly.
-    # Etc.
-  # Flow style
-  Numbers: !!omap [ one: 1, two: 2, three : 3 ]
-
-# http://yaml.org/type/pairs.html ---------------------------------------------#
-
-pairs:
-  # Explicitly typed pairs.
-  Block tasks: !!pairs
-    - meeting: with team.
-    - meeting: with boss.
-    - break: lunch.
-    - meeting: with client.
-  Flow tasks: !!pairs [ meeting: with team, meeting: with boss ]
-
-# http://yaml.org/type/set.html -----------------------------------------------#
-
-set:
-  # Explicitly typed set.
-  baseball players: !!set
-    ? Mark McGwire
-    ? Sammy Sosa
-    ? Ken Griffey
-  # Flow style
-  baseball teams: !!set { Boston Red Sox, Detroit Tigers, New York Yankees }
-
-# http://yaml.org/type/seq.html -----------------------------------------------#
-
-seq:
-  # Ordered sequence of nodes
-  Block style: !!seq
-  - Mercury   # Rotates - no light/dark sides.
-  - Venus     # Deadliest. Aptly named.
-  - Earth     # Mostly dirt.
-  - Mars      # Seems empty.
-  - Jupiter   # The king.
-  - Saturn    # Pretty.
-  - Uranus    # Where the sun hardly shines.
-  - Neptune   # Boring. No rings.
-  - Pluto     # You call this a planet?
-  Flow style: !!seq [ Mercury, Venus, Earth, Mars,      # Rocks
-                      Jupiter, Saturn, Uranus, Neptune, # Gas
-                      Pluto ]                           # Overrated
-
-
-# Scalar Types #################################################################
-################################################################################
-
-# http://yaml.org/type/bool.html ----------------------------------------------#
-
-bool:
-  - true
-  - True
-  - TRUE
-  - false
-  - False
-  - FALSE
-
-# http://yaml.org/type/float.html ---------------------------------------------#
-
-float:
-  canonical: 6.8523015e+5
-  exponentioal: 685.230_15e+03
-  fixed: 685_230.15
-  sexagesimal: 190:20:30.15
-  negative infinity: -.inf
-  not a number: .NaN
-
-# http://yaml.org/type/int.html -----------------------------------------------#
-
-int:
-  canonical: 685230
-  decimal: +685_230
-  octal: 02472256
-  hexadecimal: 0x_0A_74_AE
-  binary: 0b1010_0111_0100_1010_1110
-  sexagesimal: 190:20:30
-
-# http://yaml.org/type/merge.html ---------------------------------------------#
-
-merge:
-  - &CENTER { x: 1, y: 2 }
-  - &LEFT { x: 0, y: 2 }
-  - &BIG { r: 10 }
-  - &SMALL { r: 1 }
-  
-  # All the following maps are equal:
-  
-  - # Explicit keys
-    x: 1
-    y: 2
-    r: 10
-    label: nothing
-  
-  - # Merge one map
-    << : *CENTER
-    r: 10
-    label: center
-  
-  - # Merge multiple maps
-    << : [ *CENTER, *BIG ]
-    label: center/big
-  
-  - # Override
-    << : [ *BIG, *LEFT, *SMALL ]
-    x: 1
-    label: big/left/small
-
-# http://yaml.org/type/null.html ----------------------------------------------#
-
-null:
-  # This mapping has four keys,
-  # one has a value.
-  empty:
-  canonical: ~
-  english: null
-  ~: null key
-  # This sequence has five
-  # entries, two have values.
-  sparse:
-    - ~
-    - 2nd entry
-    -
-    - 4th entry
-    - Null
-
-# http://yaml.org/type/str.html -----------------------------------------------#
-
-string: abcd
-
-# http://yaml.org/type/timestamp.html -----------------------------------------#
-
-timestamp:
-  canonical:        2001-12-15T02:59:43.1Z
-  valid iso8601:    2001-12-14t21:59:43.10-05:00
-  space separated:  2001-12-14 21:59:43.10 -5
-  no time zone (Z): 2001-12-15 2:59:43.10
-  date (00:00:00Z): 2002-12-14
-
-
-# JavaScript Specific Types ####################################################
-################################################################################
-
-# https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp
-
-regexp:
-  simple: !!js/regexp      foobar
-  modifiers: !!js/regexp   /foobar/mi
-
-# https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/undefined
-
-undefined: !!js/undefined ~
-
-# https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function
-
-function: !!js/function >
-  function foobar() {
-    return 'Wow! JS-YAML Rocks!';
-  }
-
-
-# Custom types #################################################################
-################################################################################
-
-
-# JS-YAML allows you to specify a custom YAML types for your structures.
-# This is an example of custom constructor defined in `js/demo.js` for
-# custom `!sexy` constructor:
-#
-# var sexyType = new jsyaml.Type('!sexy', {
-#   loader: {
-#     kind: 'array',
-#     resolver: function (object, explicit) {
-#       var index, length;
-#
-#       for (index = 0, length = object.length; index < length; index += 1) {
-#         object[index] = 'sexy ' + object[index];
-#       }
-#
-#       return object;
-#     }
-#   }
-# });
-#
-# var SEXY_SCHEMA = jsyaml.Schema.create([ sexyType ]);
-#
-# result = jsyaml.load(yourData, { schema: SEXY_SCHEMA });
-
-foobar: !sexy
-  - bunny
-  - chocolate
-</textarea>
-</div>
+<script id="template" type='x/handlebars'>
+  <div class="tc-canvas">
+      <div class="tc-head">
+          <h1>{{name}}</h1>
+          {{#if tagline}}
+              <h2>{{tagline}}</h2>
+          {{/if}}
+          <p class="versioning">Version: {{version}} - {{date}}</p>
+      </div>
+      <div class="tc-body">
+          <div class="tc-area-a problem">
+              <h3>Problem</h3>
+              <ul class="primary">
+              {{#each problems}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-a solution">
+              <h3>Solution</h3>
+              <ul class="primary">
+              {{#each solutions}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+              <ul class="secondary">
+              {{#each alternatives}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-a pitch">
+              <h3>Pitch</h3>
+              <ul class="primary">
+              {{#each one_liner}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-a reach">
+              <h3>Reach</h3>
+              <ul class="primary">
+              {{#each reaching}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-a for">
+              <h3>For</h3>
+              <ul class="primary">
+              {{#each for}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+              <ul class="secondary">
+              {{#each early_adopters}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+      </div>
+      <div class="tc-bottomline">
+          <div class="tc-area-b costs">
+              <h3>Costs</h3>
+              <ul class="primary">
+              {{#each costs}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-b revenue">
+              <h3>Revenue</h3>
+              <ul class="primary">
+              {{#each revenue}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+      </div>
+      <div class="tc-row">
+          <span class="credits"><a href="http://www.create-build-execute.com/"></a></span>
+      </div>
+  </div>
+</script>
 <div class='dst'>
-  <h5>Result (JS object dump):</h5>
-  <textarea id="result"></textarea>
+  <a href="#" id="permalink">permalink</a>
+  <div id="result"></div>
 </div>
 
-<div class="gh-ribbon">
-  <a href="https://github.com/nodeca/js-yaml" target="_blank" title="Source code for YAML JavaScript parser">Fork me on GitHub</a>
+<div class='src'>
+  <h5>Edit source here (YAML):</h5>
+  <textarea id="source">
+name: "Tech Creationist Community | Create.Build.Execute. Community"
+tagline: creationism is an evolutionary community process
+tc-version: 1
+version: 1.0
+date: June 29, 2014 – 16:32
+
+
+
+problems:
+  - too many good ideas stay hidden, especially towards those who supposedly benefit the most from it (aka helping the poor with XXXX)
+  - techies build awesome products but suck at marketing them
+  - business peeps are missing good ideas, projects and the possibility to build them
+  - good ideas are a collective effort, require time and a constructive discourse to emerge and thrive
+
+
+solutions:
+  - an international community of tech product creationists, connecting each other, sharing successful tips and tricks while also acting as a thinktank and vienese café
+
+alternatives:
+  - quora
+  - hacker news
+  - (Berlin) Hack'n'Tell
+  - hackathon.io / AngelHack
+  - LinkedIn
+
+
+for:
+  - techies/developers with a cool projects
+  - business people looking for ideas
+  - businesses looking for ideas
+  - non-profits raising awareness about problems
+  - investors looking for revolutional ideas
+
+
+early_adopters:
+  - Friends and acquiotens (Carl, coderholic)
+  - Berlin Hack'n'Tell
+  - Berlin Startup Scene
+
+
+reaching:
+  - talking about it at HnT/Recording it there
+  - Personal contacts
+  - Adwords (does this make sense/what to target for?)
+  - content production
+
+
+costs:
+  - content production (blog posts, ebooks, bhnt videos)
+  - moderation (volunteer)
+  - initial build
+  - marketing
+  - hosting
+
+
+revenue:
+ - personal time of team
+ - volunteer time by community
+ - money from Ben
+ - money through eBook sales
+ - money through donations (paypal, gittip, etc)
+ - sponsoring/sponsorships
+
+
+one_liner:
+ - An online community to discuss, nature and elevate tech solutions fixing real world problems through educating its techies about business/marketing/sales and connecting project builders with people allowing them to apply them.
+
+</textarea>
 </div>
 
 <!-- AddThis Button BEGIN
