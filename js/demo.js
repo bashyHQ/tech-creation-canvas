@@ -88,7 +88,8 @@ window.runDemo = function runDemo() {
   // });
 
   // initial source
-  //updateSource();
+  if (!location.hash) document.getElementsByTagName("body")[0].classList.add("editor-open");
+  updateSource();
 
   // start monitor hash change
   hasher.prependHash = '';

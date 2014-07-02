@@ -52,7 +52,7 @@
                 </ul>
               </div>
           </div>
-          <div class="tc-area-a pitch">
+          <div class="tc-area-a impact">
               <h3>Impact</h3>
               <ul class="primary">
               {{#each impact}}
@@ -125,17 +125,17 @@
               </ul>
           </div>
       </div>
-      <div class="tc-row">
-          <span class="credits"><a href="http://www.create-build-execute.com/"></a></span>
-      </div>
   </div>
 </script>
 <div class='dst'>
   <a href="#" id="permalink">permalink</a>
   <div id="result"></div>
+  <p class="credits">build with <a href="http://ligthyear.github.io/tech-creationist-canvas">The Tech Creationist Canvas</a> <br>– a project by <a href="http://www.create-build-execute.com/">Benjamin Kampmann</a></p>
 </div>
 
 <div class='src'>
+  <span class="open-editor" onclick="javascript:document.getElementsByTagName('body')[0].classList.add('editor-open');">open editor</span>
+  <span class="close-editor" onclick="javascript:document.getElementsByTagName('body')[0].classList.remove('editor-open');">close editor</span>
   <h5>Edit source here (YAML):</h5>
   <textarea id="source">
 # the name of the project

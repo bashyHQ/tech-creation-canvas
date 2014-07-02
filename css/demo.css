@@ -12,77 +12,73 @@ h1 {
 #permalink {
   float: right;
 }
+
 h5 {
   font-size: 16px;
   font-weight: normal;
   line-height: 30px;
+  padding-left: 15px;
   margin: 0;
-  font-style: italic;
 }
+
 .src {
   width: 100%;
+  height: 2em;
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: none repeat scroll 0% 0% #eee;
+  border-top: 1px solid #eee;
 }
+
 .dst {
   width: 100%;
+  padding-bottom: 20px;
+}
+
+.credits {
+  padding-top: 35px;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 .src .CodeMirror {
-  background-color: #fffffb;
+  background-color: #eee;
   border: 1px solid #888;
   border-radius: 3px;
   box-shadow: 0 0 3px #ccc inset;
 }
 
-.dst .CodeMirror {
-  background-color: #F8F8F8;
-  border: 1px solid #eee;
-  border-radius: 3px;
-}
-
 .CodeMirror-scroll {
-  height: 500px;
+  height: 225px;
   line-height: 1.2;
 }
 
 .cm-s-default span.cm-comment {color: #baa;}
 
-.addthis_toolbox {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  opacity: .6;
-}
-.addthis_toolbox:hover {
-  opacity: 1;
+
+.editor-open .src {
+  height: 250px;
 }
 
-.gh-ribbon {
-    -moz-transform: rotate(45deg);
-    background-color: #686868;
-    box-shadow: 0 0 2px rgba(102, 102, 102, 0.4);
-    display: block;
-    padding: 1px 0;
-    position: fixed;
-    right: -60px;
-    top: 44px;
-    width: 230px;
-    z-index: 10000;
+.close-editor,
+.editor-open .open-editor {
+  display: none;
 }
-.gh-ribbon a {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 13px;
-    border: 1px solid #AAAAAA;
-    color: #FFFFFF;
-    display: block;
-    font-size: 13px;
-    font-weight: 700;
-    outline: medium none;
-    padding: 4px 50px 2px;
-    text-align: center;
-    text-decoration: none;
+
+.open-editor,
+.editor-open .close-editor {
+  display: block;
+  float: right;
+  padding-right: 10px;
+  line-height: 30px;
+  cursor: pointer;
 }
-.csstransforms .gh-ribbon {
-    display: block;
+
+.editor-open .dst {
+  padding-bottom: 250px;
 }
 
 .tc-canvas {
@@ -97,6 +93,7 @@ h5 {
 .tc-canvas h2 {
   text-align: center;
   font-size: 20px;
+  color: #e0e0e0;
 }
 
 .tc-canvas p.versioning {
@@ -154,11 +151,18 @@ h5 {
   color: #999;
 }
 
+.tc-canvas .solution .primary,
+.tc-canvas .impact .primary,
+.tc-canvas .for .primary {
+  max-height: 16em;
+  overflow-y: scroll;
+}
+
 .secondary {
-  margin-top: 5em;
   font-size: 0.8em;
-  bottom: 0;
+  bottom: 10px;
   position: absolute;
+  height: 10em;
 }
 
 
