@@ -30,12 +30,12 @@ alternatives:
 # what other alternatives are people currently using (even in the physical world) to scratch that itch?
   - lean startup canvas
 
-impact:
-# what are the (ideological) impacts you try to make with it?
+purpose:
+# what is the hihger purpose behind this project?
   - enable more techies to evaluate their solutions and develop them to impact society for the better
 
-key_metrics:
-# what key metrics to look at/measure in order to find out whether the solution does have the desired impact?
+impact_metrics:
+# what are key metrics showing the impact you are making towards the purpose?
   - users of the canvas
   - links to the canvas
   - people talking about the canvas
