@@ -1,6 +1,7 @@
 /*global window, document, location, CodeMirror, jsyaml, inspect, base64, hasher*/
 
 
+
 window.runDemo = function runDemo() {
   'use strict';
 
@@ -27,6 +28,10 @@ window.runDemo = function runDemo() {
 
   var SEXY_SCHEMA = jsyaml.Schema.create([ sexyType ]);
 
+  function display_error(message){
+    result.innerHTML = message;
+  }
+
   function parse() {
     var str, obj;
 
@@ -42,15 +47,37 @@ window.runDemo = function runDemo() {
     }
   }
 
+  window.loadFromGist = function(data){
+    var content;
+    for (var key in data.data.files) {
+      if (data.data.files[key].language === "YAML"){
+        content = data.data.files[key].content;
+        break;
+      }
+    }
+    if (content) {
+      source.setValue(content);
+      parse();
+    }
+    else display_error("<h1>No YAML file found in gist</h1>");
+  }
+
   function updateSource() {
     var yaml;
 
-    if (location.hash && '#tcc=' === location.hash.toString().slice(0,5)) {
-      yaml = base64.decode(location.hash.slice(5));
+    if (location.hash){
+      if ('#tcc=' === location.hash.toString().slice(0,5)) {
+        yaml = base64.decode(location.hash.slice(5));
+        source.setValue(yaml || fallback);
+        parse();
+      } else if ('#gist=' === location.hash.toString().slice(0,6)) {
+        display_error("<h2>Loading Gist</h2>")
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://api.github.com/gists/' + location.hash.toString().slice(6) + '?callback=loadFromGist';
+        document.getElementsByTagName("body")[0].appendChild(script);
+      }
     }
-
-    source.setValue(yaml || fallback);
-    parse();
   }
 
   permalink = document.getElementById('permalink');
@@ -89,6 +116,7 @@ window.runDemo = function runDemo() {
 
   // initial source
   if (!location.hash) document.getElementsByTagName("body")[0].classList.add("editor-open");
+
   updateSource();
 
   // start monitor hash change
