@@ -142,8 +142,10 @@ window.runDemo = function runDemo() {
   // });
 
   // initial source
-  if (!location.hash) document.getElementsByTagName("body")[0].classList.add("editor-open");
-
+  if (!location.hash) {
+    location.hash = '#github=ligthyear/tech-creationist-canvas'
+    document.getElementsByTagName("body")[0].classList.add("editor-open");
+  }
   updateSource();
 
   // start monitor hash change
