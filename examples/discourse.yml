@@ -1,0 +1,73 @@
+
+# the name of the project
+name: "Discourse"
+
+# Describe the project in a one-line elevator pitch
+tagline: better forums for better conversations
+
+# tech creationist canvas version
+tcc-version: 1
+
+# versioning of the idea
+version: 1.0
+# when did you change this?
+date: July 34d, 2014 – 10:50
+
+
+problems:
+# Please describe the problems you want to solve
+  - a lot of great content is hidden in unaccessible forums
+  - forums have aged and aren't up to date anymore
+  - though forums have always been a great way of discussing for humans, their lack of usability and accessibiltiy threatens a free and open discourse
+  - more and more highly relevant discourse move on to social platforms, making them in-accessible, harder to find and ultimately out of the control of the organisers behind it
+  - good moderation on existing forums and social networks is hard, making it unneccassirily harder to nurture for a great community
+
+
+solutions:
+# what is the proposed solution to them?
+  - "an open-source re-implementation of forums if they were built today: using latest technologies and build-in tools that make moderation and control much easier"
+
+alternatives:
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - nodebb
+  - facebook
+
+purpose:
+# what is the hihger purpose behind this project?
+  - nurture and grow accessible online-communities for good discourse by empowering owners and moderators through state of the art tools
+
+impact_metrics:
+# what are key metrics showing the impact you are making towards the purpose?
+  - users on meta.discourse.org
+  - running installations
+  - contributors
+
+for:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
+  - web users
+  - community owners
+  - company community people
+  - non-profits
+  
+
+early_adopters:
+# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+  - technically skilled forum owners
+  - open source enthusiast communities
+
+reaching:
+# how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
+  - Word to mouth
+  - Developer Mailing lists
+  - Talking about it on conferences
+
+costs:
+# what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
+  - building and maintaining the platform
+  - nurturing the community
+  - installing and supporting corporate and non-profit clients
+
+revenue:
+# How will this be paid for? Both in time and money
+ - time and investments by founding team (one year+, times three)
+ - contract money from hosted instances and administration of those

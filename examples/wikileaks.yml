@@ -1,0 +1,77 @@
+
+# the name of the project
+name: "Wikileaks"
+
+# Describe the project in a one-line elevator pitch
+tagline: transparency is the ultimate power
+
+# tech creationist canvas version
+tcc-version: 1
+
+# versioning of the idea
+version: 1.0
+# when did you change this?
+date: July 34d, 2014 – 11:02
+
+
+problems:
+# Please describe the problems you want to solve
+  - through technology advances the ways to oppress have increased
+  - more and more power is handeled and assigned through information than ever before
+  - yet fewer and fewer of these information make it to the public
+  - rendering those in power without control, oversight and lack of responsibility
+  - increasingly mistakes aren't only made but also covered up to sustain in power
+  - even if these information make it to the public, journalists are unable to visit and handle these huge amounts of data to uncover the real story
+
+solutions:
+# what is the proposed solution to them?
+  - a network of people and technologies protecting sources
+  - offer protection to whistle blowers and those under oppression
+  - offer technical assistance to journalists
+
+alternatives:
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - whistle blower protection programmes
+  - spy treaties
+
+purpose:
+# what is the hihger purpose behind this project?
+  - nurture and grow accessible online-communities for good discourse by empowering owners and moderators through state of the art tools
+
+impact_metrics:
+# what are key metrics showing the impact you are making towards the purpose?
+  - users on meta.discourse.org
+  - running installations
+  - contributors
+
+for:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
+  - the general population
+  - investigative journalists
+  - surpressed powers
+  - transparency organisations
+  - soon-to-be whistle blowers
+  
+
+early_adopters:
+# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+  - new york times journalists
+  - open source enthusiast
+  - oppressed activists
+
+reaching:
+# how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
+  - Word to mouth
+  - Cooporating with classic media/investigative journalism
+  - Talking about it on conferences
+
+costs:
+# what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
+  - building the initial network (time on conferences/convincing people)
+  - maintaining a network of data scientists and hackers
+
+revenue:
+# How will this be paid for? Both in time and money
+ - time and investments by founding team
+ - volunteering of techies and supporting activists
+ - donations of general public

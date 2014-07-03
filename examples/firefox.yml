@@ -1,0 +1,70 @@
+
+# the name of the project
+name: "Mozilla Firefox"
+
+# Describe the project in a one-line elevator pitch
+tagline: An open Browser for an open Web
+
+# tech creationist canvas version
+tcc-version: 1
+
+# versioning of the idea
+version: 1.0
+# when did you change this?
+date: July 3rd, 2014 – 10:38
+
+
+problems:
+# Please describe the problems you want to solve
+  - the internet is an increasingly competitive field which more stronger powers tries to control
+  - the freedom of the internet is at risk at all times
+  - web browsers are a fundamental building blocks of the internet and more of them are under control of these power hungry parties than ever
+  - (web) development doesn't always go into the direction of benefiting the end user but more towards companies
+  - these power struggles inhibit mininorieties and just cement existing power structures
+
+
+solutions:
+# what is the proposed solution to them?
+  - an open-source web-browser, build by an inclusive value-driven, openness-focussed community with the best for the end-user in mind
+
+alternatives:
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - opera
+  - chrom(e/ium)
+  - webkit
+
+purpose:
+# what is the hihger purpose behind this project?
+  - protect and promote the freedom and accessibilty of a web for all
+
+impact_metrics:
+# what are key metrics showing the impact you are making towards the purpose?
+  - daily users
+  - downloads of new versions
+  - usage in otherwise underrepresented areas and groups
+
+for:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
+  - web users of all areas of live
+
+
+early_adopters:
+# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+  - Open Source Enthusiasts
+  - Mozilla Employees
+
+reaching:
+# how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
+  - Mailing lists
+  - (Developer) Social Networks
+  - Big-Media Campaigns for new releases
+
+costs:
+# what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
+  - building and maintaining the browser
+  - promotion and media advertisments on releases
+
+revenue:
+# How will this be paid for? Both in time and money
+ - community of open source developers
+ - full-time employees from Mozilla (paid through their donations)
