@@ -6,7 +6,7 @@ name: "Tech Creationist Canvas"
 tagline: Evalutating tech ideas for increased, sustainable impact
 
 # tech creationist canvas version
-renderer: tcc2
+renderer: tcc
 
 # versioning of the idea
 version: 1.0

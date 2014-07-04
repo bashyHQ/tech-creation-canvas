@@ -13,8 +13,8 @@ window.runDemo = function runDemo() {
       fallback = document.getElementById('source').value || ',',
       result = document.getElementById("result"),
       templates = {
-          "tcc1": Handlebars.compile(document.getElementById('template-tcc1').innerHTML),
-          "tcc2": Handlebars.compile(document.getElementById('template-tcc2').innerHTML),
+          "tcc-beta": Handlebars.compile(document.getElementById('template-tcc-beta').innerHTML),
+          "tcc": Handlebars.compile(document.getElementById('template-tcc').innerHTML),
           "lsc": Handlebars.compile(document.getElementById('template-lsc').innerHTML),
           "bmc": Handlebars.compile(document.getElementById('template-bmc').innerHTML)
       };
@@ -47,7 +47,7 @@ window.runDemo = function runDemo() {
     try {
       str = source.getValue();
       obj = jsyaml.load(str, { schema: SEXY_SCHEMA });
-      template = templates[obj.renderer] || templates["tcc1"];
+      template = templates[obj.renderer] || templates["tcc"];
 
       permalink.href = '#data=' + base64.encode(str);
       embedlink.value = '<iframe width="1024" height="860" src="' + permalink.href + '"></iframe>';

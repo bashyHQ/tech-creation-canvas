@@ -6,7 +6,7 @@ name: "Discourse"
 tagline: better forums for better conversations
 
 # tech creationist canvas version
-renderer: tcc2
+renderer: tcc
 
 # versioning of the idea
 version: 1.0

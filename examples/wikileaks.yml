@@ -6,12 +6,12 @@ name: "Wikileaks"
 tagline: transparency is the ultimate power
 
 # tech creationist canvas version
-renderer: tcc1
+renderer: tcc
 
 # versioning of the idea
 version: 1.0
 # when did you change this?
-date: July 34d, 2014 – 11:02
+date: July 4th, 2014 – 21:08
 
 
 problems:
@@ -44,8 +44,8 @@ impact_metrics:
   - running installations
   - contributors
 
-for:
-# who are you targeting? Who is the solution for? What will help you mkae that impact?
+benefactors:
+  # who is this for? Which Users, maybe some third parties?
   - the general population
   - investigative journalists
   - surpressed powers
@@ -53,25 +53,33 @@ for:
   - soon-to-be whistle blowers
   
 
-early_adopters:
-# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+partners:
+# Specific benefactors, who share that purpose and would like to help by partnering
   - new york times journalists
   - open source enthusiast
   - oppressed activists
 
-reaching:
+channels:
 # how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
   - Word to mouth
   - Cooporating with classic media/investigative journalism
   - Talking about it on conferences
 
-costs:
-# what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
-  - building the initial network (time on conferences/convincing people)
-  - maintaining a network of data scientists and hackers
+build:
+  costs:
+  # what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
+    - building the initial network
+  coverage:
+    - time and investments by founders
+    - volunteers
 
-revenue:
-# How will this be paid for? Both in time and money
- - time and investments by founding team
- - volunteering of techies and supporting activists
- - donations of general public
+
+execute:
+  costs:
+    - maintaining and growing a network of data scientists and hackers
+    - raising awareness
+    - protecting sources
+  coverage:
+    # How will this be paid for? Both in time and money
+    - volunteering of techies and supporting activists
+    - donations of general public
