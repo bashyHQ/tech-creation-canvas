@@ -12,7 +12,10 @@ window.runDemo = function runDemo() {
   var source, initial, permalink, timer1, timer2 = null,
       fallback = document.getElementById('source').value || ',',
       result = document.getElementById("result"),
-      template = Handlebars.compile(document.getElementById('template').innerHTML);
+      templates = {
+          "tcc1": Handlebars.compile(document.getElementById('template-tcc1').innerHTML),
+          "tcc2": Handlebars.compile(document.getElementById('template-tcc2').innerHTML)
+      };
 
   // add sexy constructor
   var sexyType = new jsyaml.Type('!sexy', {
@@ -37,11 +40,12 @@ window.runDemo = function runDemo() {
   }
 
   function parse() {
-    var str, obj;
+    var str, obj, template;
 
     try {
       str = source.getValue();
       obj = jsyaml.load(str, { schema: SEXY_SCHEMA });
+      template = templates[obj.renderer] || templates["tcc1"];
 
       permalink.href = '#tcc=' + base64.encode(str);
       embedlink.value = '<iframe width="1024" height="860" src="' + permalink.href + '"></iframe>';

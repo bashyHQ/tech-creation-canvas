@@ -114,45 +114,47 @@ h5 {
   padding-bottom: 250px;
 }
 
-.tc-canvas {
+
+// TCC1
+.tcc-1 {
   display: block;
 }
 
-.tc-canvas  h1 {
+.tcc-1  h1 {
   text-align: center;
   font-size: 25px;
 }
 
-.tc-canvas h2 {
+.tcc-1 h2 {
   text-align: center;
   font-size: 20px;
   color: #e0e0e0;
 }
 
-.tc-canvas p.versioning {
+.tcc-1 p.versioning {
   font-size: 10px;
   text-align: right;
 }
 
-.tc-canvas *,
-.tc-canvas *:after,
-.tc-canvas *:before {
+.tcc-1 *,
+.tcc-1 *:after,
+.tcc-1 *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 
-.tc-canvas .tc-head,
-.tc-canvas .tc-body,
-.tc-canvas .tc-bottomline {
+.tcc-1 .tc-head,
+.tcc-1 .tc-body,
+.tcc-1 .tc-bottomline {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.tc-canvas .tc-area-a,
-.tc-canvas .tc-area-b {
+.tcc-1 .tc-area-a,
+.tcc-1 .tc-area-b {
   display: inline-block;
   vertical-align: top;
   border-left: solid 1px #eee;
@@ -160,38 +162,38 @@ h5 {
   padding: 10px;
 }
 
-.tc-canvas .tc-area-a {
+.tcc-1 .tc-area-a {
   height: 30em;
   width: 19.5%;
   position: relative;
 }
 
-.tc-canvas .tc-area-b {
+.tcc-1 .tc-area-b {
   height: 18em;
   width: 49%;
 }
 
-.tc-canvas .tc-body,
-.tc-canvas .tc-bottomline{
+.tcc-1 .tc-body,
+.tcc-1 .tc-bottomline{
   border: 1px solid #eee;
 }
-.tc-canvas .tc-body {
+.tcc-1 .tc-body {
   border-bottom: none;
 }
 
-.tc-canvas h3 {
+.tcc-1 h3 {
   margin: 0.2em;
   color: #999;
 }
 
-.tc-canvas .solution .primary,
-.tc-canvas .impact .primary,
-.tc-canvas .for .primary {
+.tcc-1 .solution .primary,
+.tcc-1 .impact .primary,
+.tcc-1 .for .primary {
   max-height: 16em;
   overflow-y: scroll;
 }
 
-.secondary {
+.tcc-1 .secondary {
   font-size: 0.8em;
   bottom: 10px;
   position: absolute;
@@ -199,20 +201,20 @@ h5 {
 }
 
 
-.tc-canvas .tc-area-a:first-child,
-.tc-canvas .tc-area-b:first-child {
+.tcc-1 .tc-area-a:first-child,
+.tcc-1 .tc-area-b:first-child {
   border-left: none;
 }
 
 
-.tc-canvas ul {
+.tcc-1 ul {
   margin: 0;
   list-style: none;
   padding: 0;
 
 }
 
-.tc-canvas .primary li {
+.tcc-1 .primary li {
   margin: 0px 0px 15px;
   padding: 0px;
   line-height: 1.5em;
@@ -220,7 +222,168 @@ h5 {
   padding-top: 4px;
 }
 
-.tc-canvas .secondary li {
+.tcc-1 .secondary li {
+  padding: 3px;
+  display: inline-block;
+  border: 1px dashed #eee;
+  margin: 2px;
+}
+
+// TCC1
+.tcc-2 {
+  display: block;
+}
+
+.tcc-2 .tc-row:after {
+  display: table-cell;
+  clear: both;
+}
+
+.tcc-2  h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.tcc-2 h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #e0e0e0;
+}
+
+.tcc-2 p.versioning {
+  font-size: 10px;
+  text-align: right;
+}
+
+.tcc-2 *,
+.tcc-2 *:after,
+.tcc-2 *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.tcc-2 .tc-head,
+.tcc-2 .tc-body,
+.tcc-2 .tc-bottomline {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.tcc-2 .tc-area-a,
+.tcc-2 .center-wrap,
+.tcc-2 .tc-area-b,
+.tcc-2 .tc-area-c {
+  display: inline-block;
+  vertical-align: top;
+  border-left: solid 1px #eee;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.tcc-2 .tc-area-a {
+  height: 30em;
+  width: 24%;
+  position: relative;
+}
+
+.tcc-2 .center-wrap {
+  width: 49%;
+  padding: 0;
+}
+
+
+.tcc-2 .tc-area-b {
+  width: 49%;
+  height: 15em;
+  margin: 0;
+  position: relative;
+}
+
+.tcc-2 .build {
+  border-right: none;
+
+}
+
+.tcc-2 .purpose {
+  border: none;
+  border-top: 1px solid #eee;
+  width: 100%;
+  padding: 10px;
+  height: 15em;
+  position: relative;
+}
+
+.tcc-2 .tc-body,
+.tcc-2 .tc-bottomline{
+  border: 1px solid #eee;
+}
+.tcc-2 .tc-body {
+  border-bottom: none;
+}
+
+.tcc-2 h3 {
+  margin: 0.2em;
+  color: #999;
+}
+
+.tcc-2 .problem .primary,
+.tcc-2 .benefactors .primary,
+.tcc-2 .for .primary {
+  max-height: 16em;
+  overflow-y: scroll;
+}
+
+.tcc-2 .purpose .primary,
+.tcc-2 .build .primary,
+.tcc-2 .execute .primary{
+  max-height: 9em;
+  overflow-y: scroll;
+}
+
+
+.tcc-2 .secondary {
+  font-size: 0.8em;
+  bottom: 1em;
+  position: absolute;
+}
+
+.tcc-2 .build .secondary,
+.tcc-2 .execute .secondary {
+/*  border-top: dashed 1px #eee;*/
+  padding-top: 0.2em;
+  bottom: 4em;
+  height: 2em;
+}
+
+.tcc-2 .purpose .secondary {
+  bottom: 2em;
+}
+
+.tcc-2 .tc-area-a:first-child,
+.tcc-2 .tc-area-b:first-child {
+  border-left: none;
+}
+
+
+.tcc-2 ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+}
+
+.tcc-2 .primary li {
+  margin: 0px 0px 15px;
+  padding: 0px;
+  line-height: 1.5em;
+  border-top: 1px dashed #EEE;
+  padding-top: 4px;
+}
+
+.tcc-2 .secondary li {
   padding: 3px;
   display: inline-block;
   border: 1px dashed #eee;

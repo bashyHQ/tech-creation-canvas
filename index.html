@@ -12,8 +12,8 @@
   </head>
   <body onLoad="runDemo();">
 
-<script id="template" type='x/handlebars'>
-  <div class="tc-canvas">
+<script id="template-tcc1" type='x/handlebars'>
+  <div class="tcc-1">
       <div class="tc-head">
           <h1>{{name}}</h1>
           {{#if tagline}}
@@ -124,6 +124,147 @@
               {{/each}}
               </ul>
           </div>
+      </div>
+  </div>
+</script>
+
+<script id="template-tcc2" type='x/handlebars'>
+  <div class="tcc-2">
+      <div class="tc-head">
+          <h1>{{name}}</h1>
+          {{#if tagline}}
+              <h2>{{tagline}}</h2>
+          {{/if}}
+          <p class="versioning">Version: {{version}} - {{date}}</p>
+      </div>
+      <div class="tc-body">
+        <div class="tc-area-a problem">
+          <h3>Problems</h3>
+          <ul class="primary">
+          {{#each problems}}
+              <li>{{this}}</li>
+          {{else}}
+              <span class="empty"></span>
+          {{/each}}
+          </ul>
+          <div class="secondary">
+            <h3>Alternatives</h3>
+            <ul>
+            {{#each alternatives}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+        </div>
+        </div>
+        <div class="center-wrap">
+          <div class="tc-area-b solution">
+            <h3>Solution</h3>
+            <ul class="primary">
+            {{#each solutions}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+          </div>
+          <div class="tc-area-b education">
+            <h3>Education</h3>
+            <ul class="primary">
+            {{#each education}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+          </div>
+          <div class="purpose">
+            <h3>Purpose</h3>
+            <ul class="primary">
+            {{#each purpose}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+            <div class="secondary">
+              <h3>Impact Metrics</h3>
+              <ul>
+              {{#each impact_metrics}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tc-area-a benefactors">
+          <h3>Benefactors</h3>
+          <ul class="primary">
+          {{#each benefactors}}
+              <li>{{this}}</li>
+          {{else}}
+              <span class="empty"></span>
+          {{/each}}
+          </ul>
+          <div class="secondary">
+            <h3>Key Partners</h3>
+            <ul>
+            {{#each partners}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tc-bottomline">
+        <div class="tc-area-b build">
+          {{#if build.eta }}
+            <span class="eta">ETA: {{build.eta}}</span>
+          {{/if}}
+          <h3>Costs</h3>
+          <ul class="primary">
+          {{#each build.costs}}
+              <li>{{this}}</li>
+          {{else}}
+              <span class="empty"></span>
+          {{/each}}
+          </ul>
+          <div class="secondary">
+            <h3>Covered through</h3>
+            <ul>
+            {{#each build.coverage}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+          </div>
+        </div>
+        <div class="tc-area-b execute">
+          <h3>Execution</h3>
+          <ul class="primary">
+          {{#each execute.costs}}
+              <li>{{this}}</li>
+          {{else}}
+              <span class="empty"></span>
+          {{/each}}
+          </ul>
+          <div class="secondary">
+            <h3>Covered through</h3>
+            <ul>
+            {{#each execute.coverage}}
+                <li>{{this}}</li>
+            {{else}}
+                <span class="empty"></span>
+            {{/each}}
+            </ul>
+          </div>
+        </div>
       </div>
   </div>
 </script>
