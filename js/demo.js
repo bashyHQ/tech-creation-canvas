@@ -15,7 +15,8 @@ window.runDemo = function runDemo() {
       templates = {
           "tcc1": Handlebars.compile(document.getElementById('template-tcc1').innerHTML),
           "tcc2": Handlebars.compile(document.getElementById('template-tcc2').innerHTML),
-          "lsc": Handlebars.compile(document.getElementById('template-lsc').innerHTML)
+          "lsc": Handlebars.compile(document.getElementById('template-lsc').innerHTML),
+          "bmc": Handlebars.compile(document.getElementById('template-bmc').innerHTML)
       };
 
   // add sexy constructor

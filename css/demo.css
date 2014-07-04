@@ -364,6 +364,141 @@ h5 {
   margin: 2px;
 }
 
+
+// BMC
+.bmc-1 {
+  display: block;
+}
+
+.bmc-1  h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.bmc-1 h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #e0e0e0;
+}
+
+.bmc-1 p.versioning {
+  font-size: 10px;
+  text-align: right;
+}
+
+.bmc-1 *,
+.bmc-1 *:after,
+.bmc-1 *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.bmc-1 .tc-head,
+.bmc-1 .tc-body,
+.bmc-1 .tc-bottomline {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.bmc-1 .tc-area-a,
+.bmc-1 .tc-area-c,
+.bmc-1 .tc-area-a-f,
+.bmc-1 .tc-area-b {
+  display: inline-block;
+  vertical-align: top;
+  border-left: solid 1px #eee;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.bmc-1 .tc-area-a {
+  height: 30em;
+  width: 19.5%;
+  position: relative;
+}
+
+.bmc-1 .tc-area-a-f {
+  height: 30em;
+  width: 19.5%;
+  padding: 0;
+}
+
+.bmc-1 .tc-area-b {
+  height: 15em;
+}
+
+.bmc-1 .metrics,
+.bmc-1 .channels {
+  border: none;
+  border-top: solid 1px #eee;
+  width: 100%;
+}
+
+
+.bmc-1 .tc-area-c {
+  height: 15em;
+  width: 49.5%;
+}
+
+.bmc-1 .tc-body,
+.bmc-1 .tc-bottomline{
+  border: 1px solid #eee;
+}
+.bmc-1 .tc-body {
+  border-bottom: none;
+}
+
+.bmc-1 h3 {
+  margin: 0.2em;
+  color: #999;
+}
+
+.bmc-1 .solution .primary,
+.bmc-1 .impact .primary,
+.bmc-1 .for .primary {
+  max-height: 16em;
+  overflow-y: scroll;
+}
+
+.bmc-1 .secondary {
+  font-size: 0.8em;
+  bottom: 10px;
+  position: absolute;
+  height: 10em;
+}
+
+
+.bmc-1 .tc-area-a:first-child,
+.bmc-1 .tc-area-b:first-child {
+  border-left: none;
+}
+
+
+.bmc-1 ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+
+}
+
+.bmc-1 .primary li {
+  margin: 0px 0px 15px;
+  padding: 0px;
+  line-height: 1.5em;
+  border-top: 1px dashed #EEE;
+  padding-top: 4px;
+}
+
+.bmc-1 .secondary li {
+  padding: 3px;
+  display: inline-block;
+  border: 1px dashed #eee;
+  margin: 2px;
+}
+
 // TCC2
 .tcc-2 {
   display: block;

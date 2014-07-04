@@ -268,6 +268,118 @@
   </div>
 </script>
 
+
+<script id="template-bmc" type='x/handlebars'>
+  <div class="bmc-1">
+      <div class="tc-head">
+          <h1>{{name}}</h1>
+          {{#if tagline}}
+              <h2>{{tagline}}</h2>
+          {{/if}}
+          <p class="versioning">Version: {{version}} - {{date}}</p>
+      </div>
+      <div class="tc-body">
+          <div class="tc-area-a problem">
+              <h3>Key Partners</h3>
+              <ul class="primary">
+              {{#each partners}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-a-f">
+            <div class="tc-area-b solution">
+                <h3>Key Activities</h3>
+                <ul class="primary">
+                {{#each activities}}
+                    <li>{{this}}</li>
+                {{else}}
+                    <span class="empty"></span>
+                {{/each}}
+                </ul>
+            </div>
+            <div class="tc-area-b metrics">
+                <h3>Key Resources</h3>
+                <ul class="primary">
+                {{#each resources}}
+                    <li>{{this}}</li>
+                {{else}}
+                    <span class="empty"></span>
+                {{/each}}
+                </ul>
+            </div>
+          </div>
+          <div class="tc-area-a uvp">
+              <h3>Value Proposition</h3>
+              <ul class="primary">
+              {{#each value_proposition}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-a-f">
+            <div class="tc-area-b advantage">
+                <h3>Customer Relationship</h3>
+                <ul class="primary">
+                {{#each relationship}}
+                    <li>{{this}}</li>
+                {{else}}
+                    <span class="empty"></span>
+                {{/each}}
+                </ul>
+            </div>
+            <div class="tc-area-b channels">
+                <h3>Channels</h3>
+                <ul class="primary">
+                {{#each channels}}
+                    <li>{{this}}</li>
+                {{else}}
+                    <span class="empty"></span>
+                {{/each}}
+                </ul>
+            </div>
+          </div>
+          <div class="tc-area-a customers">
+              <h3>Customers Segments</h3>
+              <ul class="primary">
+              {{#each segments}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+      </div>
+      <div class="tc-bottomline">
+          <div class="tc-area-c costs">
+              <h3>Cost Structure</h3>
+              <ul class="primary">
+              {{#each costs}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+          <div class="tc-area-c revenue">
+              <h3>Revenue Stream</h3>
+              <ul class="primary">
+              {{#each revenue}}
+                  <li>{{this}}</li>
+              {{else}}
+                  <span class="empty"></span>
+              {{/each}}
+              </ul>
+          </div>
+      </div>
+  </div>
+</script>
+
+
 <script id="template-tcc2" type='x/handlebars'>
   <div class="tcc-2">
       <div class="tc-head">

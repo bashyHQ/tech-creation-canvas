@@ -1,0 +1,57 @@
+
+# the name of the project
+name: "Car2Go"
+
+# Describe the project in a one-line elevator pitch
+tagline: Mercedes Benz's Smart Car-Sharing
+
+# tech creationist canvas version
+renderer: bmc
+
+# versioning of the idea
+version: 1.0
+# when did you change this?
+date: July 4th, 2014 – 16:36
+
+
+partners:
+# Please describe the problems you want to solve
+  - cities
+
+activities:
+# what is the proposed solution to them?
+  - intra-day car-rental
+
+resources:
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - car park
+
+
+value_proposition:
+# what is the hihger purpose behind this project?
+  - get used driving our cars by using them in your daily life already
+
+relationship:
+# what are key metrics showing the impact you are making towards the purpose?
+  - service centers
+  - telephone support
+  - app
+
+segments:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
+  - end consumers
+
+channels:
+# how will the benefactors and partners learn about the project/product/service?
+  - app
+  - social media
+  - pop-up-stores
+
+costs:
+ - car park
+ - "building and maintaining App: agency "
+ - support ppl (Employees)
+
+revenue:
+ - Pay-per-Minute
+ - Marketing-Money from Mother Company
