@@ -5,12 +5,47 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Live example of YAML JavaScript parser right in your browser. Type your YAML code and see result.">
     <meta name="keywords" content="yaml,parser,javascript">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/codemirror.css">
     <link rel="stylesheet" href="css/codemirror.default.css">
     <link rel="stylesheet" href="css/demo.css">
   </head>
   <body onLoad="runDemo();">
+
+<div id='modal' class="modalBoxWrap">
+    <div class="modalBoxOverlay">
+        &nbsp;
+    </div>
+
+    <div class="vertical-offset">
+        <div class="modalBox">
+            <h3>Load an Example</h3>
+            <ul>
+              <li>
+                <h4>Tech Creationist's Canvas</h4>
+                <ul>
+                  <li><a onclick="javascript:document.getElementById('modal').style.display = 'none'" href="#github=ligthyear/tech-creationist-canvas">Tech Creationists Canvas</a> (Default)</li>
+                  <li><a onclick="javascript:document.getElementById('modal').style.display = 'none'" href="#github=ligthyear/tech-creationist-canvas:examples/discourse.yml">Discourse</a></li>
+                  <li><a onclick="javascript:document.getElementById('modal').style.display = 'none'" href="#github=ligthyear/tech-creationist-canvas:examples/firefox.yml">Firefox</a></li>
+                  <li><a onclick="javascript:document.getElementById('modal').style.display = 'none'" href="#github=ligthyear/tech-creationist-canvas:examples/wikileaks.yml">Wikileaks</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <h4>Lean Startup Canvas</h4>
+                <ul>
+                  <li><a onclick="javascript:document.getElementById('modal').style.display = 'none'" href="#github=ligthyear/tech-creationist-canvas:examples/soundcloud.yml">Soundcloud</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <h4>Business Model Canvas</h4>
+                <ul>
+                  <li><a onclick="javascript:document.getElementById('modal').style.display = 'none'" href="#github=ligthyear/tech-creationist-canvas:examples/car2go.yml">Car2Go</a></li>
+                </ul>
+              </li>
+        </div>
+    </div>
+</div>
 
 <script id="template-tcc1" type='x/handlebars'>
   <div class="tcc-1">
@@ -526,7 +561,7 @@
 </div>
 
 <div class='src'>
-  <h5>Edit source here (YAML):</h5>
+  <h5>Edit source here (YAML): <span class="openModal" onclick="javascript:document.getElementById('modal').style.display = 'block'">load examples</span></h5>
   <div class="editor-links">
     <span class="no-embed" onclick="javascript:document.getElementsByClassName('src')[0].classList.add('embed-open');">embed</span>
     <input id="embedlink" type="text" class="embed"> <span class="embed" onclick="javascript:document.getElementsByClassName('src')[0].classList.remove('embed-open');">x</span> || 
