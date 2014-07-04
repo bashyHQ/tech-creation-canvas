@@ -6,7 +6,7 @@ name: "Mozilla Firefox"
 tagline: An open Browser for an open Web
 
 # tech creationist canvas version
-tcc-version: 1
+renderer: tcc1
 
 # versioning of the idea
 version: 1.0

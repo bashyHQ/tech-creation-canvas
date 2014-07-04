@@ -6,7 +6,7 @@ name: "Wikileaks"
 tagline: transparency is the ultimate power
 
 # tech creationist canvas version
-tcc-version: 1
+renderer: tcc1
 
 # versioning of the idea
 version: 1.0
