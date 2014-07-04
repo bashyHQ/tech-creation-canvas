@@ -3,66 +3,74 @@
 name: "Tech Creationist Canvas"
 
 # Describe the project in a one-line elevator pitch
-tagline: Evalutating tech ideas to increase impact
+tagline: Evalutating tech ideas for increased, sustainable impact
 
 # tech creationist canvas version
-tcc-version: 1
+renderer: tcc2
 
 # versioning of the idea
 version: 1.0
 # when did you change this?
-date: July 2nd, 2014 – 16:32
+date: July 4th, 2014 – 10:33
 
 
 problems:
 # Please describe the problems you want to solve
   - finding the value propostion of a tech idea is hard
   - there is no decent way of evaluting tech ideas quickly and early
-  - most evalutions are too business-driven
+  - existing evalutions are too business-driven and don't cover non-profit, community or open-source projects
   - evaluting tech ideas isn't accessible to hackers
-
 
 solutions:
 # what is the proposed solution to them?
-  - an evolution of the lean startup canvas for tech driven ideas
+  - an evolution of the lean startup canvas for tech driven ideas focussed on impact, purpose and project structure
 
 alternatives:
 # what other alternatives are people currently using (even in the physical world) to scratch that itch?
   - lean startup canvas
+  - business model canvas
 
 purpose:
 # what is the hihger purpose behind this project?
-  - enable more techies to evaluate their solutions and develop them to impact society for the better
+  - enable more techies to evaluate their solutions and have them build more sustainable tech project
 
 impact_metrics:
 # what are key metrics showing the impact you are making towards the purpose?
   - users of the canvas
   - links to the canvas
   - people talking about the canvas
+  - more tech products making it into production
 
-for:
+benefactors:
 # who are you targeting? Who is the solution for? What will help you mkae that impact?
   - techies/developers with a cool projects
   - business people to understand the value proposition of tech ideas
 
-
-early_adopters:
+partners:
 # Anyone you want to single out because they will be the first to take this solution and help you get it there?
-  - Ben
+  - Stefan/Hack'n'Tell Berlin
   - tech creationist's community
 
-reaching:
-# how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
+education:
+# how will the benefactors and partners learn about the project/product/service?
   - using it to evalute existing concepts
   - Personal contacts
   - integrating it into tech creationist community
 
-costs:
+build:
 # what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
-  - initial build
-  - hosting (free on gh-pages)
-  - integration into discourse
+  ETA: 1 week
+  costs:
+    - initial build
+    - hosting (free on gh-pages)
+    - integration into discourse
+  covered:
+    - personal time
 
-revenue:
-# How will this be paid for? Both in time and money
- - personal time of ben
+execute:
+  costs:
+   - marketing costs
+   - maintanance costs
+   - continuous costs
+  coverage:
+   - mozilla foundation
