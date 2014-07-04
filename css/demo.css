@@ -660,6 +660,14 @@ h5 {
   margin: 2px;
 }
 
+.tcc-2 .eta {
+  float: right;
+  font-size: 0.8em;
+  color: #aaa;
+  border: 1px dashed #eee;
+  padding: 5px 1em;
+}
+
 .in-frame .src,
 .in-frame #embedlink,
 .in-frame #permalink

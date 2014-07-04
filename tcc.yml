@@ -59,7 +59,7 @@ channels:
 
 build:
 # what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
-  ETA: 1 week
+  eta: 1 week
   costs:
     - initial build
     - hosting (free on gh-pages)

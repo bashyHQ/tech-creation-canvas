@@ -63,7 +63,7 @@ channels:
 build:
   # the initial build
   # what's the proporsed ETA
-  ETA: July 2014
+  eta: July 2014
   costs:
   # what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
    - building and maintaining the platform
