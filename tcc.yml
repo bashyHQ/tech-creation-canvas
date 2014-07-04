@@ -64,7 +64,7 @@ build:
     - initial build
     - hosting (free on gh-pages)
     - integration into discourse
-  covered:
+  coverage:
     - personal time
 
 execute:
