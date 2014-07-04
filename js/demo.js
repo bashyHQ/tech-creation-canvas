@@ -14,7 +14,8 @@ window.runDemo = function runDemo() {
       result = document.getElementById("result"),
       templates = {
           "tcc1": Handlebars.compile(document.getElementById('template-tcc1').innerHTML),
-          "tcc2": Handlebars.compile(document.getElementById('template-tcc2').innerHTML)
+          "tcc2": Handlebars.compile(document.getElementById('template-tcc2').innerHTML),
+          "lsc": Handlebars.compile(document.getElementById('template-lsc').innerHTML)
       };
 
   // add sexy constructor
@@ -47,7 +48,7 @@ window.runDemo = function runDemo() {
       obj = jsyaml.load(str, { schema: SEXY_SCHEMA });
       template = templates[obj.renderer] || templates["tcc1"];
 
-      permalink.href = '#tcc=' + base64.encode(str);
+      permalink.href = '#data=' + base64.encode(str);
       embedlink.value = '<iframe width="1024" height="860" src="' + permalink.href + '"></iframe>';
 
       result.innerHTML = template(obj);
@@ -86,8 +87,8 @@ window.runDemo = function runDemo() {
     var yaml;
 
     if (location.hash){
-      if ('#tcc=' === location.hash.toString().slice(0,5)) {
-        yaml = base64.decode(location.hash.slice(5));
+      if ('#data=' === location.hash.toString().slice(0,6)) {
+        yaml = base64.decode(location.hash.slice(6));
       } else if ('#gist=' === location.hash.toString().slice(0,6)) {
         display_error("<h2>Loading Gist</h2>");
         var script = document.createElement('script');

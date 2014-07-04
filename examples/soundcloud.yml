@@ -1,0 +1,75 @@
+
+# the name of the project
+name: "Soundcloud"
+
+# Describe the project in a one-line elevator pitch
+tagline: the Youtube of Sounds
+
+# tech creationist canvas version
+renderer: lsc
+
+# versioning of the idea
+version: 1.0
+# when did you change this?
+date: July 4th, 2014 – 16:36
+
+
+problems:
+# Please describe the problems you want to solve
+  - there is no easy way to find and share music/sounds online
+  - especially for musicians it is hard to build and nature an audience
+  - finding good new music is broken
+
+solutions:
+# what is the proposed solution to them?
+  - a social platform to publish, share and reshare your sounds, music and sets
+
+alternatives:
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - youtube
+  - myspace
+  - own homepage
+  - facebook
+
+uvp:
+# what is the hihger purpose behind this project?
+  - the central source for good new music and sounds
+  
+hlc:
+ - the youtube for sounds
+
+metrics:
+# what are key metrics showing the impact you are making towards the purpose?
+  - usage numbers (users and traffic)
+  - number uploads
+
+customers:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
+  - labels
+  - artists
+  - semi-professional
+
+early_adopters:
+  - Berlin DJs
+
+advantage:
+# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+  - being first
+  - deeply rooted in the Berlin Electro Scene
+
+channels:
+# how will the benefactors and partners learn about the project/product/service?
+  - in-app notifications
+  - Twitter+Facebook Integration
+  - Sponsoring Events
+
+costs:
+ - "building and maintaining App: Employees"
+ - hosting
+ - rent
+ - label royalties
+
+revenue:
+ - "❌ Freemium: Pro Users"
+ - "❌ Pay-Per-Download for Music"
+ - "✷ Pay-Per-Use for Sounds"
