@@ -457,9 +457,9 @@
             </ul>
           </div>
           <div class="tc-area-b education">
-            <h3>Education</h3>
+            <h3>Channels</h3>
             <ul class="primary">
-            {{#each education}}
+            {{#each channels}}
                 <li>{{this}}</li>
             {{else}}
                 <span class="empty"></span>
@@ -513,7 +513,7 @@
           {{#if build.eta }}
             <span class="eta">ETA: {{build.eta}}</span>
           {{/if}}
-          <h3>Costs</h3>
+          <h3>Building Costs</h3>
           <ul class="primary">
           {{#each build.costs}}
               <li>{{this}}</li>
@@ -533,7 +533,7 @@
           </div>
         </div>
         <div class="tc-area-b execute">
-          <h3>Execution</h3>
+          <h3>Execution Costs</h3>
           <ul class="primary">
           {{#each execute.costs}}
               <li>{{this}}</li>
