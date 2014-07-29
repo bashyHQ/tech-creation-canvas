@@ -9,17 +9,17 @@ tagline: better forums for better conversations
 renderer: tcc
 
 # versioning of the idea
-version: 1.0
+version: 2.0
 # when did you change this?
-date: July 4th, 2014 – 20:50
+date: July 29th, 2014 – 11:50
 
 
 problems:
 # Please describe the problems this is solving
   - a lot of great content is hidden in unaccessible forums
-  - forums have aged and aren't up to date anymore
+  - forums have aged and aren't up to date anymore – technology wise
   - though forums have always been a great way of discussing for humans, their lack of usability and accessibiltiy threatens a free and open discourse
-  - more and more highly relevant discourse move on to social platforms, making them in-accessible, harder to find and ultimately out of the control of the organisers behind it
+  - more and more highly relevant discourse moves on to social platforms, making them in-accessible, harder to find and ultimately out of the control of the organisers behind it
   - good moderation on existing forums and social networks is hard, making it unneccassirily harder to nurture for a great community
 
 
@@ -34,7 +34,7 @@ alternatives:
 
 purpose:
 # what is the higher purpose behind this project?
-  - nurture and grow accessible online-communities for good discourse by empowering owners and moderators through state of the art tools
+  - nurture and grow accessible online communities for good discourse by empowering owners and moderators through state of the art tools
 
 impact_metrics:
 # what are key metrics showing the impact you are making towards the purpose?
@@ -52,10 +52,12 @@ benefactors:
 partners:
 # Specific benefactors, who share that purpose and would like to help by partnering
   - open source enthusiast communities
+  - open community organisations (maybe Mozilla? P2Pu?)
   - EmberJS Community
 
 channels:
 # how will you be reaching those people? What types of communication or awareness increasing measure will you be taking?
+  - personal network/reach of founders
   - Word to mouth
   - Developer Mailing lists
   - Talking about it on conferences

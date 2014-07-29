@@ -11,21 +11,21 @@ renderer: tcc
 # versioning of the idea
 version: 1.0
 # when did you change this?
-date: July 4th, 2014 – 21:08
+date: July 29th, 2014 – 11:08
 
 
 problems:
 # Please describe the problems you want to solve
-  - through technology advances the ways to oppress have increased
+  - through technology advances the ways to oppress ppl have drastically increased
   - more and more power is handeled and assigned through information than ever before
-  - yet fewer and fewer of these information make it to the public
+  - yet fewer and fewer of the information makes it to the public
   - rendering those in power without control, oversight and lack of responsibility
   - increasingly mistakes aren't only made but also covered up to sustain in power
   - even if these information make it to the public, journalists are unable to visit and handle these huge amounts of data to uncover the real story
 
 solutions:
 # what is the proposed solution to them?
-  - a network of people and technologies protecting sources
+  - a network of people and technologies protecting leaks
   - offer protection to whistle blowers and those under oppression
   - offer technical assistance to journalists
 
@@ -36,13 +36,13 @@ alternatives:
 
 purpose:
 # what is the hihger purpose behind this project?
-  - nurture and grow accessible online-communities for good discourse by empowering owners and moderators through state of the art tools
+  - take back the control of those in power and make them responsible for their actions
 
 impact_metrics:
 # what are key metrics showing the impact you are making towards the purpose?
-  - users on meta.discourse.org
-  - running installations
-  - contributors
+  - size of the network
+  - number of governments taken down
+  - impact the revealing stories have in real life
 
 benefactors:
   # who is this for? Which Users, maybe some third parties?

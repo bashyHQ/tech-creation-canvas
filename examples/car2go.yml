@@ -9,14 +9,15 @@ tagline: Mercedes Benz's Smart Car-Sharing
 renderer: bmc
 
 # versioning of the idea
-version: 1.0
+version: 2.0
 # when did you change this?
-date: July 4th, 2014 – 16:36
+date: July 29th, 2014 – 11:07
 
 
 partners:
 # Please describe the problems you want to solve
-  - cities
+  - city governments
+  - environment concerned NGOs
 
 activities:
 # what is the proposed solution to them?
@@ -28,21 +29,21 @@ resources:
 
 
 value_proposition:
-# what is the hihger purpose behind this project?
+# what is the proposed value
   - get used driving our cars by using them in your daily life already
 
 relationship:
-# what are key metrics showing the impact you are making towards the purpose?
   - service centers
   - telephone support
   - app
 
 segments:
-# who are you targeting? Who is the solution for? What will help you mkae that impact?
+# who are you targeting? Who is the solution for? What will help you make that impact?
   - end consumers
+  - the urban non-car owners
 
 channels:
-# how will the benefactors and partners learn about the project/product/service?
+# how will you have contact with them
   - app
   - social media
   - pop-up-stores

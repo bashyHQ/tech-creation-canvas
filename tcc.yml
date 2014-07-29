@@ -9,9 +9,9 @@ tagline: Evalutating tech ideas for increased, sustainable impact
 renderer: tcc
 
 # versioning of the idea
-version: 1.0
+version: 2.0
 # when did you change this?
-date: July 4th, 2014 – 10:33
+date: July 29th, 2014 – 11:33
 
 
 problems:
@@ -48,14 +48,15 @@ benefactors:
 
 partners:
 # Anyone you want to single out because they will be the first to take this solution and help you get it there?
-  - Stefan/Hack'n'Tell Berlin
-  - tech creationist's community
+  - Blog Readers
+  - Twitter Followers/people asked about it directly
 
 channels:
 # how will the benefactors and partners learn about the project/product/service?
   - using it to evalute existing concepts
   - Personal contacts
-  - integrating it into tech creationist community
+  - asking ppl over social media
+  - as part of the tech creationist community
 
 build:
 # what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
@@ -63,14 +64,15 @@ build:
   costs:
     - initial build
     - hosting (free on gh-pages)
-    - integration into discourse
+    - review and refining
+    - blog posts announcing it
   coverage:
     - personal time
 
 execute:
   costs:
-   - marketing costs
+   - hosting costs
    - maintanance costs
-   - continuous costs
   coverage:
-   - mozilla foundation
+   - hosted for free on gh-pages
+   - maintance through personal time and github repo
