@@ -134,6 +134,7 @@ h5 {
 .tcc-1 p.versioning {
   font-size: 10px;
   text-align: right;
+  padding-right: 100px;
 }
 
 .tcc-1 *,
@@ -249,6 +250,7 @@ h5 {
 .lsc-1 p.versioning {
   font-size: 10px;
   text-align: right;
+  padding-right: 100px;
 }
 
 .lsc-1 *,
@@ -384,6 +386,7 @@ h5 {
 .bmc-1 p.versioning {
   font-size: 10px;
   text-align: right;
+  padding-right: 100px;
 }
 
 .bmc-1 *,
@@ -523,6 +526,7 @@ h5 {
 .tcc-2 p.versioning {
   font-size: 10px;
   text-align: right;
+  padding-right: 100px;
 }
 
 .tcc-2 *,
@@ -719,3 +723,5 @@ h5 {
     padding:10px;
     border:1px solid black;
 }
+
+#ribbon a{background:green;color:#fff;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#ribbon a:hover{background:lightgreen;color:#fff;}#ribbon a::before,#ribbon a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#ribbon a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#ribbon{position:fixed;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#ribbon a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}
