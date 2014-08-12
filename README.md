@@ -1,4 +1,4 @@
-# Tech Creationists Canvas
+# Tech Creationist Canvas
 
 - Description here
 
@@ -13,7 +13,7 @@
 
 
 ## Authors:
-Benjamin Kampmann <me @ create-build-execute . com>
+Benjamin Kampmann <ben @ create-build-execute . com>
 
 ## License (BSD):
 Copyright (c) 2014, Benjamin Kampmann
