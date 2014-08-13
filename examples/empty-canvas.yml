@@ -1,0 +1,62 @@
+
+# the name of the project
+name: "Empty Canvas"
+
+# Describe the project in a one-line elevator pitch
+tagline: empty for you to fill
+
+# Which renderer to use?
+renderer: tcc
+
+# Version of the document
+version: 0.1
+
+# last change
+date: August 12th, 2014 – 18:04
+
+
+problems:
+# Please describe the problems you want to solve
+  - 
+
+solutions:
+# what is the proposed solution to them?
+  - 
+
+alternatives:
+# what other alternatives are people currently using (even in the physical world) to scratch that itch?
+  - 
+
+purpose:
+# what is the higher purpose behind this project?
+  - 
+
+impact_metrics:
+# what are key metrics showing the impact you are making towards the purpose?
+  - 
+
+benefactors:
+# who are you targeting? Who is the solution for? What will help you mkae that impact?
+  - 
+
+partners:
+# Anyone you want to single out because they will be the first to take this solution and help you get it there?
+  - 
+
+channels:
+# how will the benefactors and partners learn about the project/product/service?
+  - 
+
+build:
+# what does it cost? In both MONEY AND TIME? Put the highest costs first (time is more expensive than money)
+  eta: unclear
+  costs:
+    - 
+  coverage:
+    - 
+
+execute:
+  costs:
+   - 
+  coverage:
+   - 
