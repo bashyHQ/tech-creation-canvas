@@ -3,6 +3,11 @@ body {
   padding: 0;
   font-family: 'Lato', sans-serif;
   color: #333;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
 }
 
 h1 {
@@ -17,7 +22,6 @@ h1 {
 
 h5 {
   font-size: 16px;
-  font-weight: normal;
   line-height: 30px;
   padding-left: 15px;
   margin: 0;
@@ -149,24 +153,22 @@ h5 {
 .tcc-1 .tc-head,
 .tcc-1 .tc-body,
 .tcc-1 .tc-bottomline {
-  display: block;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  min-width: 960px;
 }
 
 .tcc-1 .tc-area-a,
 .tcc-1 .tc-area-b {
-  display: inline-block;
-  vertical-align: top;
   border-left: solid 1px #eee;
   overflow-y: scroll;
   padding: 10px;
+  flex-grow: 1;
 }
 
 .tcc-1 .tc-area-a {
-  height: 30em;
-  width: 19.5%;
   position: relative;
+  flex-basis: 24vw;
 }
 
 .tcc-1 .tc-area-b {
@@ -538,42 +540,41 @@ h5 {
 }
 
 
-.tcc-2 .tc-head,
+.tcc-2 .tc-head{
+  display: block;
+}
+
 .tcc-2 .tc-body,
 .tcc-2 .tc-bottomline {
-  display: block;
-  height: 100%;
-  width: 100%;
+  display: flex;
 }
 
 .tcc-2 .tc-area-a,
-.tcc-2 .center-wrap,
 .tcc-2 .tc-area-b,
 .tcc-2 .tc-area-c {
-  display: inline-block;
-  vertical-align: top;
   border-left: solid 1px #eee;
-  overflow-y: scroll;
+  flex-basis: 24vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-}
-
-.tcc-2 .tc-area-a {
-  height: 30em;
-  width: 24%;
   position: relative;
 }
 
 .tcc-2 .center-wrap {
-  width: 49%;
+  border-left: solid 1px #eee;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-box-pack: justify;
+  flex-basis: 51vw;
+  flex-grow: 1;
+  justify-content: space-between;
   padding: 0;
 }
 
 
 .tcc-2 .tc-area-b {
-  width: 49%;
-  height: 15em;
   margin: 0;
-  position: relative;
 }
 
 .tcc-2 .build {
@@ -582,11 +583,10 @@ h5 {
 }
 
 .tcc-2 .purpose {
+  flex-grow: 1;
   border: none;
   border-top: 1px solid #eee;
-  width: 100%;
   padding: 10px;
-  height: 15em;
   position: relative;
 }
 
@@ -603,37 +603,15 @@ h5 {
   color: #999;
 }
 
-.tcc-2 .problem .primary,
-.tcc-2 .benefactors .primary,
-.tcc-2 .for .primary {
-  max-height: 16em;
-  overflow-y: scroll;
-}
 
-.tcc-2 .purpose .primary,
-.tcc-2 .build .primary,
-.tcc-2 .execute .primary{
-  max-height: 9em;
-  overflow-y: scroll;
+.tcc-2 .primary {
+  flex-grow: 2;
 }
 
 
 .tcc-2 .secondary {
+  padding-top: 1em;
   font-size: 0.8em;
-  bottom: 1em;
-  position: absolute;
-}
-
-.tcc-2 .build .secondary,
-.tcc-2 .execute .secondary {
-/*  border-top: dashed 1px #eee;*/
-  padding-top: 0.2em;
-  bottom: 4em;
-  height: 2em;
-}
-
-.tcc-2 .purpose .secondary {
-  bottom: 2em;
 }
 
 .tcc-2 .tc-area-a:first-child,
@@ -665,7 +643,8 @@ h5 {
 }
 
 .tcc-2 .eta {
-  float: right;
+  position: absolute;
+  right: 5px;
   font-size: 0.8em;
   color: #aaa;
   border: 1px dashed #eee;
