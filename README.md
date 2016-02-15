@@ -4,6 +4,7 @@
 
 ## Changelog:
 
+ - Feb 15th, 2016: Project moves to [Bashy.io](http://www.bashy.io/)
  - July 29th, 2014: First initial call for feedback
 
 ## Todos:
@@ -29,4 +30,4 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ---
 
-Though this Licence allows you to do anything without further boundaries, I and the whole community would highly appreciate it, if you'd inform us about the changes you did and why you did them. 
+Though this Licence allows you to do anything without further boundaries, I and the whole community would highly appreciate it, if you'd inform us about the changes you did and why you did them.

@@ -1,6 +1,6 @@
 
 # the name of the project
-name: "Tech Creationist Canvas"
+name: "Tech Creation Canvas"
 
 # Describe the project in a one-line elevator pitch
 tagline: Evalutating tech ideas for increased, sustainable impact
@@ -9,10 +9,10 @@ tagline: Evalutating tech ideas for increased, sustainable impact
 renderer: tcc
 
 # Version of the document
-version: 2.1
+version: 2.2
 
 # last change
-date: August 12th, 2014 – 18:04
+date: Feb 15th, 2016 – 12:08
 
 
 problems:
@@ -58,7 +58,7 @@ channels:
   - using it to evalute existing concepts on the blog
   - Personal contacts
   - asking ppl over social media
-  - as part of the tech creationist community
+  - as part of the bashy community
   - have the banner for easy recognition
 
 build:

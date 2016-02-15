@@ -149,7 +149,7 @@ window.runDemo = function runDemo() {
 
   // initial source
   if (!location.hash) {
-    location.hash = '#github=ligthyear/tech-creationist-canvas'
+    location.hash = '#github=bashyHQ/tech-creation-canvas'
     document.getElementsByTagName("body")[0].classList.add("editor-open");
   }
   updateSource();
